@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>n8n user group Philippines</title>
+  <meta name="description" content="Community of workflow automation builders across the Philippines sharing nodes, templates, and production patterns with n8n.">
+  <link rel="icon" type="image/svg+xml" href="n8n-symbol-accent.svg">
+
+  <style>
+    /* ==========================================================================
+       n8n BRAND TOKENS (Light Mode) - n8ndesign.md
+       ========================================================================== */
+    :root {
+      /* Semantic Tokens: Light Mode (section 3) */
+      --Background\/Primary: #FAFAFA;
+      --Background\/Secondary: #F1F1F1;
+      --Background\/Tertiary: #EAEAEA;
+      --Background\/Accent-Pink: #FF91AC;
+
+      --Type\/Primary: #191919;
+      --Type\/Secondary: rgba(25, 25, 25, 0.5);
+      --Type\/Tertiary-Buttons: #191919;
+      --Type\/Accent: #FF91AC;
+
+      --Interactive-Primary\/Default: #F1F1F1;
+      --Interactive-Primary\/Hover: #F8F8F8;
+      --Interactive-Primary\/Pressed: #F1F1F1;
+      --Interactive-Primary\/Focused: #FF91AC;
+
+      --Interactive-Accent\/Default: #FF91AC;
+      --Interactive-Accent\/Hover: #FFD0D9;
+      --Interactive-Accent\/Pressed: #FFBCCA;
+      --Interactive-Accent\/Focused: #FF91AC;
+
+      --Dot-Grid\/Primary: #D6D6D6;
+      --Dot-Grid\/Accent: #FFD0D9;
+
+      --Stroke-Crosshairs\/Primary: #BFBFBF;
+      --Stroke-Crosshairs\/Secondary: #E0E0E0;
+      --Stroke-Crosshairs\/Accent: #FF91AC;
+
+      --Capsule-Connector-Dot\/Dot: #191919;
+
+      /* Spacing Tokens (section 1.3 - rule of 8) */
+      --Spacing\/Space-4px: 4px;
+      --Spacing\/Space-8px: 8px;
+      --Spacing\/Space-12px: 12px;
+      --Spacing\/Space-16px: 16px;
+      --Spacing\/Space-24px: 24px;
+      --Spacing\/Space-32px: 32px;
+      --Spacing\/Space-40px: 40px;
+      --Spacing\/Space-48px: 48px;
+      --Spacing\/Space-64px: 64px;
+      --Spacing\/Space-80px: 80px;
+      --Spacing\/Space-88px: 88px;
+      --Spacing\/Space-96px: 96px;
+      --Spacing\/Space-120px: 120px;
+      --Spacing\/Space-160px: 160px;
+      --Spacing\/Space-240px: 240px;
+
+      /* Radius Tokens (section 1.4) */
+      --Radius\/none: 0px;
+      --Radius\/XS: 4px;
+      --Radius\/Small: 8px;
+      --Radius\/Medium: 12px;
+      --Radius\/Large: 16px;
+      --Radius\/XL: 24px;
+      --Radius\/Full: 400px;
+
+      /* Deboss Tokens (section 2.2 - Light Mode Primary) */
+      --Deboss-Primary-S: inset 4px 4px 8px 0 #EAEAEA, inset -4px -4px 8px 0 #FFFFFF;
+      --Deboss-Primary-M: inset 8px 8px 12px 0 #EAEAEA, inset -8px -8px 12px 0 #FFFFFF;
+      --Deboss-Primary-L: inset 12px 12px 16px 0 #EAEAEA, inset -12px -12px 16px 0 #FFFFFF;
+
+      /* Clean Semantic Aliases */
+      --bg-primary: var(--Background\/Primary);
+      --bg-secondary: var(--Background\/Secondary);
+      --bg-tertiary: var(--Background\/Tertiary);
+      --bg-accent-pink: var(--Background\/Accent-Pink);
+
+      --type-primary: var(--Type\/Primary);
+      --type-secondary: var(--Type\/Secondary);
+      --type-tertiary-buttons: var(--Type\/Tertiary-Buttons);
+      --type-accent: var(--Type\/Accent);
+
+      --interactive-primary-default: var(--Interactive-Primary\/Default);
+      --interactive-primary-hover: var(--Interactive-Primary\/Hover);
+      --interactive-primary-pressed: var(--Interactive-Primary\/Pressed);
+      --interactive-primary-focused: var(--Interactive-Primary\/Focused);
+
+      --interactive-accent-default: var(--Interactive-Accent\/Default);
+      --interactive-accent-hover: var(--Interactive-Accent\/Hover);
+      --interactive-accent-pressed: var(--Interactive-Accent\/Pressed);
+      --interactive-accent-focused: var(--Interactive-Accent\/Focused);
+
+      --dot-grid-primary: var(--Dot-Grid\/Primary);
+      --dot-grid-accent: var(--Dot-Grid\/Accent);
+
+      --stroke-crosshairs-primary: var(--Stroke-Crosshairs\/Primary);
+      --stroke-crosshairs-secondary: var(--Stroke-Crosshairs\/Secondary);
+      --stroke-crosshairs-accent: var(--Stroke-Crosshairs\/Accent);
+
+      --capsule-connector-dot: var(--Capsule-Connector-Dot\/Dot);
+
+      --space-4: var(--Spacing\/Space-4px);
+      --space-8: var(--Spacing\/Space-8px);
+      --space-12: var(--Spacing\/Space-12px);
+      --space-16: var(--Spacing\/Space-16px);
+      --space-24: var(--Spacing\/Space-24px);
+      --space-32: var(--Spacing\/Space-32px);
+      --space-40: var(--Spacing\/Space-40px);
+      --space-48: var(--Spacing\/Space-48px);
+      --space-64: var(--Spacing\/Space-64px);
+      --space-80: var(--Spacing\/Space-80px);
+      --space-88: var(--Spacing\/Space-88px);
+      --space-96: var(--Spacing\/Space-96px);
+      --space-120: var(--Spacing\/Space-120px);
+      --space-160: var(--Spacing\/Space-160px);
+      --space-240: var(--Spacing\/Space-240px);
+
+      --radius-xs: var(--Radius\/XS);
+      --radius-sm: var(--Radius\/Small);
+      --radius-md: var(--Radius\/Medium);
+      --radius-lg: var(--Radius\/Large);
+      --radius-xl: var(--Radius\/XL);
+      --radius-full: var(--Radius\/Full);
+
+      /* Typography Fallback Stacks */
+      --font-family-display: 'n8n Baumer Uniwidth', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-family-headline: 'n8n Baumer Uniwidth', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-family-body: 'n8n Baumer Uniwidth', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-family-mono: 'n8n Baumer Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
+
+    /* ==========================================================================
+       GLOBAL RESET & TYPOGRAPHIC RULES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-feature-settings: "liga" 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--type-primary);
+      font-family: var(--font-family-body);
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--type-primary);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Type Scale (section 1.2) */
+    .display-sm {
+      font-family: var(--font-family-display);
+      font-size: 120px;
+      line-height: 108px; /* 90% */
+      letter-spacing: -0.01em;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-xxxlg {
+      font-family: var(--font-family-headline);
+      font-size: 80px;
+      line-height: 80px;
+      letter-spacing: -0.01em;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-xxlg {
+      font-family: var(--font-family-headline);
+      font-size: 56px;
+      line-height: 56px;
+      letter-spacing: -0.01em;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-xlg {
+      font-family: var(--font-family-headline);
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -0.01em;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-lg {
+      font-family: var(--font-family-headline);
+      font-size: 40px;
+      line-height: 42px;
+      letter-spacing: -0.01em;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-md {
+      font-family: var(--font-family-headline);
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-sm {
+      font-family: var(--font-family-headline);
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .heading-xsm {
+      font-family: var(--font-family-headline);
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    /* heading-xxs: 20px size, chosen line-height 24px consistent with heading-xsm */
+    .heading-xxs {
+      font-family: var(--font-family-headline);
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .body-xl-regular {
+      font-family: var(--font-family-body);
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    .body-xl-medium {
+      font-family: var(--font-family-body);
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: pretty;
+    }
+
+    .body-lg-regular {
+      font-family: var(--font-family-body);
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    .body-lg-medium {
+      font-family: var(--font-family-body);
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: pretty;
+    }
+
+    .body-md-regular {
+      font-family: var(--font-family-body);
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    .body-md-medium {
+      font-family: var(--font-family-body);
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0;
+      font-weight: 500;
+      text-wrap: pretty;
+    }
+
+    .body-sm-regular {
+      font-family: var(--font-family-body);
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    /* Mono Styles - ALWAYS ALL CAPS */
+    .mono-body-lg {
+      font-family: var(--font-family-mono);
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .mono-body-md {
+      font-family: var(--font-family-mono);
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .mono-body-sm {
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    /* Accessible Focus Style */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--interactive-primary-focused);
+      outline-offset: 2px;
+    }
+
+    /* ==========================================================================
+       CONNECTED CAPSULES (Section 2.2)
+       ========================================================================== */
+    .capsule-row {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: var(--space-16);
+      flex-wrap: nowrap;
+    }
+
+    .capsule-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--capsule-connector-dot);
+      flex-shrink: 0;
+      z-index: 2;
+      position: relative;
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    .capsule-row > .capsule-dot:first-child {
+      margin-left: 0;
+      margin-right: -4px;
+    }
+
+    .capsule-row > .capsule-dot:last-child {
+      margin-left: -4px;
+      margin-right: 0;
+    }
+
+    .capsule {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 28px;
+      padding: 0 var(--space-12);
+      font-family: var(--font-family-mono);
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--type-primary);
+      border-radius: var(--radius-full);
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+    .capsule-accent {
+      background-color: var(--bg-accent-pink);
+    }
+
+    .capsule-secondary {
+      background-color: var(--bg-secondary);
+    }
+
+    .capsule-tertiary {
+      background-color: var(--bg-tertiary);
+    }
+
+    /* ==========================================================================
+       BUTTONS (Section 3 Tokens)
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-8);
+      padding: var(--space-12) var(--space-24);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-family-body);
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+      white-space: nowrap;
+    }
+
+    /* Accent Button: Main Pink default, Pink 20 hover, Pink 30 pressed */
+    .btn-accent {
+      background-color: var(--interactive-accent-default);
+      color: var(--type-primary); /* Core Black on Pink (contrast 8.29:1) */
+    }
+
+    .btn-accent:hover {
+      background-color: var(--interactive-accent-hover);
+    }
+
+    .btn-accent:active {
+      background-color: var(--interactive-accent-pressed);
+      transform: translateY(1px);
+    }
+
+    /* Primary Button: Gray 15 default, Gray 10 hover, Gray 15 pressed */
+    .btn-secondary {
+      background-color: var(--interactive-primary-default);
+      color: var(--type-primary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--interactive-primary-hover);
+    }
+
+    .btn-secondary:active {
+      background-color: var(--interactive-primary-pressed);
+      transform: translateY(1px);
+    }
+
+    /* ==========================================================================
+       DEBOSS CONTAINERS (Section 2.2)
+       ========================================================================== */
+    .deboss-container {
+      background-color: var(--bg-primary); /* Same as surrounding surface */
+      box-shadow: var(--Deboss-Primary-L);
+      border-radius: var(--radius-xl);
+      padding: var(--space-64) var(--space-48);
+      position: relative;
+    }
+
+    /* ==========================================================================
+       DOT GRID TEXTURE (Section 2.2)
+       ========================================================================== */
+    .dot-grid-texture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(var(--dot-grid-primary) 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      background-position: 0 0;
+      opacity: 0.6;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ==========================================================================
+       LAYOUT & PAGE GRID (Multiples of 8px)
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-32);
+      position: relative;
+    }
+
+    /* Navigation Bar */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(250, 250, 250, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--stroke-crosshairs-secondary);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-32);
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--type-primary);
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--type-secondary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-16);
+    }
+
+    /* Mobile Hamburger */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: var(--space-8);
+      color: var(--type-primary);
+    }
+
+    .mobile-menu-icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .mobile-drawer {
+      display: none;
+      flex-direction: column;
+      gap: var(--space-16);
+      padding: var(--space-24) var(--space-32);
+      background-color: var(--bg-primary);
+      border-bottom: 1px solid var(--stroke-crosshairs-secondary);
+    }
+
+    .mobile-drawer.active {
+      display: flex;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: var(--space-80) 0 var(--space-96) 0;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: var(--space-48);
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 2;
+    }
+
+    .hero-title {
+      margin-bottom: var(--space-24);
+      color: var(--type-primary);
+    }
+
+    .hero-body {
+      color: var(--type-secondary);
+      margin-bottom: var(--space-32);
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-16);
+      flex-wrap: wrap;
+    }
+
+    /* Map Container - seamless directly on page background */
+    .map-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-canvas {
+      width: 100%;
+      height: 620px;
+      display: block;
+      cursor: crosshair;
+      touch-action: manipulation;
+    }
+
+    /* Section Common Styles */
+    .section-wrap {
+      padding: var(--space-96) 0;
+      position: relative;
+    }
+
+    .section-header {
+      position: relative;
+      margin-bottom: var(--space-48);
+      max-width: 640px;
+    }
+
+    .section-title {
+      color: var(--type-primary);
+      margin-bottom: var(--space-16);
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-subtitle {
+      color: var(--type-secondary);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 3-Column Card Grid (What We Do) */
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-32);
+    }
+
+    .feature-card {
+      background-color: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--stroke-crosshairs-secondary);
+      padding: var(--space-32);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: border-color 0.15s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--stroke-crosshairs-primary);
+    }
+
+    .card-title {
+      color: var(--type-primary);
+      margin-bottom: var(--space-16);
+    }
+
+    .card-body {
+      color: var(--type-secondary);
+      flex-grow: 1;
+      margin-bottom: var(--space-24);
+    }
+
+    /* Events List / Cards */
+    .events-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-24);
+    }
+
+    .event-card {
+      background-color: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--stroke-crosshairs-secondary);
+      padding: var(--space-32);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: var(--space-32);
+      align-items: center;
+      transition: border-color 0.15s ease;
+    }
+
+    .event-card:hover {
+      border-color: var(--stroke-crosshairs-primary);
+    }
+
+    .event-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .event-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+    }
+
+    .event-title {
+      color: var(--type-primary);
+    }
+
+    .event-description {
+      color: var(--type-secondary);
+    }
+
+    /* 2x2 Why Join Grid */
+    .why-join-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-32);
+    }
+
+    .benefit-card {
+      background-color: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--stroke-crosshairs-secondary);
+      padding: var(--space-32);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .benefit-title {
+      color: var(--type-primary);
+      margin-bottom: var(--space-12);
+    }
+
+    .benefit-body {
+      color: var(--type-secondary);
+    }
+
+    /* CTA Section (Deboss) */
+    .cta-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      color: var(--type-primary);
+      margin-bottom: var(--space-16);
+    }
+
+    .cta-body {
+      color: var(--type-secondary);
+      margin-bottom: var(--space-32);
+      max-width: 600px;
+    }
+
+    .cta-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-16);
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--bg-primary);
+      border-top: 1px solid var(--stroke-crosshairs-secondary);
+      padding: var(--space-64) 0 var(--space-48) 0;
+      margin-top: auto;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-48);
+      margin-bottom: var(--space-48);
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-16);
+      max-width: 380px;
+    }
+
+    .footer-disclaimer {
+      color: var(--type-secondary);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: var(--space-64);
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-12);
+    }
+
+    .footer-col-title {
+      color: var(--type-primary);
+      margin-bottom: var(--space-4);
+    }
+
+    .footer-link {
+      color: var(--type-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--type-primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--stroke-crosshairs-secondary);
+      padding-top: var(--space-24);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--type-secondary);
+      flex-wrap: wrap;
+      gap: var(--space-16);
+    }
+
+    /* Screen Reader Utility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS (Scale using existing type scale values)
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-40);
+      }
+
+      .map-canvas {
+        height: 520px;
+      }
+
+      .cards-grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .event-card {
+        grid-template-columns: 1fr;
+        gap: var(--space-16);
+      }
+
+      .why-join-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 var(--space-16);
+      }
+
+      .hero-section {
+        padding: var(--space-48) 0 var(--space-64) 0;
+      }
+
+      .section-wrap {
+        padding: var(--space-64) 0;
+      }
+
+      /* Responsive type scale adaptation:
+         display-sm (120px) / heading-xxlg (56px) -> heading-lg (40px) on mobile */
+      .heading-xxlg {
+        font-size: 36px;
+        line-height: 40px;
+      }
+
+      .heading-lg {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      .deboss-container {
+        padding: var(--space-40) var(--space-24);
+      }
+
+      .map-canvas {
+        height: 420px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION
+       ======================================================================== -->
+  <header class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="brand-link" aria-label="n8n user group Philippines home">
+          <img src="n8n-logo-black-accent.svg" alt="n8n user group Philippines" width="160" height="32" class="brand-logo">
+        </a>
+
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="#what-we-do" class="nav-link">What we do</a></li>
+            <li><a href="#upcoming-events" class="nav-link">Upcoming events</a></li>
+            <li><a href="#why-join" class="nav-link">Why join</a></li>
+            <li><a href="#community" class="nav-link">Community</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#community" class="btn btn-accent mono-body-sm">Join the community</a>
+          <button class="mobile-menu-btn" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+            <svg class="mobile-menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-nav" aria-hidden="true">
+      <a href="#what-we-do" class="nav-link">What we do</a>
+      <a href="#upcoming-events" class="nav-link">Upcoming events</a>
+      <a href="#why-join" class="nav-link">Why join</a>
+      <a href="#community" class="nav-link">Community</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <!-- Connected Capsule Row -->
+            <div class="capsule-row" role="group" aria-label="Community category">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">USER GROUP</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">PHILIPPINES</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+
+            <!-- Plain, confident headline (sentence case, lowercase n8n) -->
+            <h1 class="heading-xxlg hero-title">Automation, built together across the Philippines.</h1>
+
+            <!-- One line of body copy -->
+            <p class="body-lg-regular hero-body">
+              A community of builders across Luzon, the Visayas, and Mindanao sharing workflows, solving integration challenges, and learning n8n together.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#community" class="btn btn-accent">Join the community</a>
+              <a href="#upcoming-events" class="btn btn-secondary">Browse upcoming events</a>
+            </div>
+          </div>
+
+          <!-- Signature Element: Interactive 3D Dot Map (floating directly on background) -->
+          <div class="map-container">
+            <canvas id="ph-dot-map" class="map-canvas" role="img" aria-label="Dot map of the Philippines" tabindex="-1"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. WHAT WE DO
+         ====================================================================== -->
+    <section class="section-wrap" id="what-we-do">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="heading-lg section-title">What we do</h2>
+          <p class="body-lg-regular section-subtitle">
+            We build community through technical collaboration, peer problem solving, and reusable automation patterns.
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Card 1: Meetups -->
+          <div class="feature-card">
+            <div class="capsule-row" role="group" aria-label="Event type">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">MEETUPS</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">MONTHLY</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-sm card-title">Local and virtual meetups</h3>
+            <p class="body-md-regular card-body">
+              We gather regularly in person and online to demonstrate real production workflows and discuss automation patterns. Builders walk through how they connect APIs, manage webhooks, and handle error routing in production.
+            </p>
+          </div>
+
+          <!-- Card 2: Workshops -->
+          <div class="feature-card">
+            <div class="capsule-row" role="group" aria-label="Session type">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">WORKSHOPS</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">HANDS-ON</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-sm card-title">Hands-on technical workshops</h3>
+            <p class="body-md-regular card-body">
+              Step-by-step sessions cover intermediate and advanced topics, from self-hosting n8n on Docker to custom node development and AI agent orchestration. Participants work through live code and shared canvas templates.
+            </p>
+          </div>
+
+          <!-- Card 3: Community Workflows -->
+          <div class="feature-card">
+            <div class="capsule-row" role="group" aria-label="Repository type">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">WORKFLOWS</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">OPEN SOURCE</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-sm card-title">Shared workflow library</h3>
+            <p class="body-md-regular card-body">
+              Members share tested workflow templates tailored to local services, regional APIs, and common operational tasks. Every workflow is open source, documented, and free to adapt for your own instances.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. UPCOMING EVENTS
+         ====================================================================== -->
+    <section class="section-wrap" id="upcoming-events">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="heading-lg section-title">Upcoming events</h2>
+          <p class="body-lg-regular section-subtitle">
+            Sessions are announced across community channels two weeks before each date.
+          </p>
+        </div>
+
+        <div class="events-grid">
+          <!-- Event 1 Placeholder -->
+          <div class="event-card">
+            <div class="event-meta">
+              <div class="capsule-row" role="group" aria-label="Event timing and location">
+                <span class="capsule-dot" aria-hidden="true"></span>
+                <span class="capsule capsule-accent">[DATE: Q1 2026]</span>
+                <span class="capsule-dot" aria-hidden="true"></span>
+                <span class="capsule capsule-secondary">[VENUE: METRO MANILA / HYBRID]</span>
+                <span class="capsule-dot" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3 class="heading-xsm event-title">[EVENT NAME: BUILDING RELIABLE WEBHOOK PIPELINES]</h3>
+              <p class="body-md-regular event-description">
+                A technical walkthrough on managing high-throughput webhooks, idempotent execution, and error queues in n8n.
+              </p>
+            </div>
+            <div>
+              <a href="#community" class="btn btn-secondary mono-body-sm">Register interest</a>
+            </div>
+          </div>
+
+          <!-- Event 2 Placeholder -->
+          <div class="event-card">
+            <div class="event-meta">
+              <div class="capsule-row" role="group" aria-label="Event timing and location">
+                <span class="capsule-dot" aria-hidden="true"></span>
+                <span class="capsule capsule-accent">[DATE: Q2 2026]</span>
+                <span class="capsule-dot" aria-hidden="true"></span>
+                <span class="capsule capsule-secondary">[VENUE: CEBU CITY / ONLINE]</span>
+                <span class="capsule-dot" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3 class="heading-xsm event-title">[EVENT NAME: SELF-HOSTING n8n ON DOCKER]</h3>
+              <p class="body-md-regular event-description">
+                Best practices for containerized deployments, automated backups, and environment variable configuration.
+              </p>
+            </div>
+            <div>
+              <a href="#community" class="btn btn-secondary mono-body-sm">Register interest</a>
+            </div>
+          </div>
+
+          <!-- Event 3 Placeholder -->
+          <div class="event-card">
+            <div class="event-meta">
+              <div class="capsule-row" role="group" aria-label="Event timing and location">
+                <span class="capsule-dot" aria-hidden="true"></span>
+                <span class="capsule capsule-accent">[DATE: Q3 2026]</span>
+                <span class="capsule-dot" aria-hidden="true"></span>
+                <span class="capsule capsule-secondary">[VENUE: DAVAO CITY / HYBRID]</span>
+                <span class="capsule-dot" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3 class="heading-xsm event-title">[EVENT NAME: AI AGENTS AND CUSTOM NODES]</h3>
+              <p class="body-md-regular event-description">
+                Hands-on session integrating large language models with internal databases, vector stores, and custom REST tools.
+              </p>
+            </div>
+            <div>
+              <a href="#community" class="btn btn-secondary mono-body-sm">Register interest</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. WHY JOIN
+         ====================================================================== -->
+    <section class="section-wrap" id="why-join">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="heading-lg section-title">Why join the community</h2>
+          <p class="body-lg-regular section-subtitle">
+            Learn directly from peers operating automation instances in production environments across the Philippines.
+          </p>
+        </div>
+
+        <div class="why-join-grid">
+          <!-- Point 1 -->
+          <div class="benefit-card">
+            <div class="capsule-row" role="group" aria-label="Topic category">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">SUPPORT</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">PEER TO PEER</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-xsm benefit-title">Peer problem solving</h3>
+            <p class="body-md-regular benefit-body">
+              Debug complex expressions, node configurations, and authentication flows with fellow engineers who run n8n daily.
+            </p>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="benefit-card">
+            <div class="capsule-row" role="group" aria-label="Topic category">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">ARCHITECTURE</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">PRODUCTION</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-xsm benefit-title">Production architecture patterns</h3>
+            <p class="body-md-regular benefit-body">
+              See how teams in the Philippines structure queue mode, workers, Redis, and PostgreSQL for resilience.
+            </p>
+          </div>
+
+          <!-- Point 3 -->
+          <div class="benefit-card">
+            <div class="capsule-row" role="group" aria-label="Topic category">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">TEMPLATES</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">LOCAL SERVICES</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-xsm benefit-title">Direct workflow sharing</h3>
+            <p class="body-md-regular benefit-body">
+              Import and export workflow JSON templates built for regional logistics, payment gateways, and communications.
+            </p>
+          </div>
+
+          <!-- Point 4 -->
+          <div class="benefit-card">
+            <div class="capsule-row" role="group" aria-label="Topic category">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">INCLUSIVE</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">ALL LEVELS</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+            <h3 class="heading-xsm benefit-title">Open to all backgrounds</h3>
+            <p class="body-md-regular benefit-body">
+              Whether you write TypeScript daily or prefer visual node wiring, the group shares knowledge freely at every stage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. JOIN THE COMMUNITY (DEBOSS BLOCK)
+         ====================================================================== -->
+    <section class="section-wrap" id="community">
+      <div class="container">
+        <!-- Deboss Primary L Container -->
+        <div class="deboss-container">
+          <div class="cta-card">
+            <div class="capsule-row" role="group" aria-label="Community action">
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-accent">COMMUNITY</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+              <span class="capsule capsule-secondary">JOIN US</span>
+              <span class="capsule-dot" aria-hidden="true"></span>
+            </div>
+
+            <h2 class="heading-lg cta-title">Join n8n user group Philippines</h2>
+            <p class="body-lg-regular cta-body">
+              Connect with automation builders across the country. Choose your preferred platform below to introduce yourself, ask questions, or share what you are building.
+            </p>
+
+            <div class="cta-links">
+              <!-- Placeholder Links -->
+              <a href="[COMMUNITY FORUM URL]" class="btn btn-accent mono-body-sm">Community forum</a>
+              <a href="[DISCORD OR FACEBOOK GROUP URL]" class="btn btn-secondary mono-body-sm">Discord or Facebook group</a>
+              <a href="[GITHUB OR TEMPLATES URL]" class="btn btn-secondary mono-body-sm">GitHub repository</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       7. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-link" aria-label="n8n user group Philippines home">
+            <img src="n8n-logo-black-accent.svg" alt="n8n user group Philippines" width="160" height="32" class="brand-logo">
+          </a>
+          <p class="body-md-regular footer-disclaimer">
+            n8n user group Philippines is an independent, community-run group. It is not an official entity of n8n GmbH.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <span class="mono-body-sm footer-col-title">NAVIGATION</span>
+            <a href="#what-we-do" class="body-md-regular footer-link">What we do</a>
+            <a href="#upcoming-events" class="body-md-regular footer-link">Upcoming events</a>
+            <a href="#why-join" class="body-md-regular footer-link">Why join</a>
+            <a href="#community" class="body-md-regular footer-link">Community</a>
+          </div>
+
+          <div class="footer-col">
+            <span class="mono-body-sm footer-col-title">COMMUNITY</span>
+            <a href="[COMMUNITY FORUM URL]" class="body-md-regular footer-link">Forum [FORUM URL]</a>
+            <a href="[DISCORD OR FACEBOOK GROUP URL]" class="body-md-regular footer-link">Chat [CHAT URL]</a>
+            <a href="[GITHUB OR TEMPLATES URL]" class="body-md-regular footer-link">Workflows [GITHUB URL]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom mono-body-sm">
+        <div>2026 n8n user group Philippines. Built with n8n design tokens.</div>
+        <div>LIGHT MODE | 8PX CROSS GRID SPECIFICATION</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INLINE SCRIPT: 3D PERSPECTIVE DOT MAP & INTERACTION
+       ======================================================================== -->
+  <script>
+    (function() {
+      // Mobile Navigation Toggle
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function() {
+          const isOpen = mobileNav.classList.toggle('active');
+          mobileToggle.setAttribute('aria-expanded', isOpen);
+          mobileNav.setAttribute('aria-hidden', !isOpen);
+        });
+      }
+
+      // Compact Pre-rasterized 8px Lattice Shape Data (2,171 Dots)
+      // Normalized from official Philippines Natural Earth multi-polygons
+      const PH_MAP_DATA = "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";
+
+      // Decode base64 into dot coordinates
+      const rawData = atob(PH_MAP_DATA);
+      const byteLen = rawData.length;
+      const bytes = new Uint8Array(byteLen);
+      for (let i = 0; i < byteLen; i++) {
+        bytes[i] = rawData.charCodeAt(i);
+      }
+      const int8Coords = new Int8Array(bytes.buffer);
+      const dotCount = int8Coords.length / 2;
+
+      // Build dot objects
+      const dots = [];
+      for (let i = 0; i < int8Coords.length; i += 2) {
+        const gx = int8Coords[i];
+        const gy = int8Coords[i + 1];
+        dots.push({
+          x: gx * 8, // Center-relative coordinate (lattice multiple of 8)
+          y: gy * 8,
+          phase: Math.random() * Math.PI * 2,
+          colorT: 0,
+          currentDispX: 0,
+          currentDispY: 0,
+          currentDispZ: 0
+        });
+      }
+
+      // Sort dots from North to South for proper painter depth order
+      dots.sort((a, b) => a.y - b.y);
+
+      // Canvas Setup
+      const canvas = document.getElementById('ph-dot-map');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const frameEl = canvas.parentElement;
+
+      // State variables
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+
+      // 3D Projection parameters
+      const BASE_TILT = 56 * (Math.PI / 180); // 56 degree tilt
+      const CAMERA_D = 1400;
+      let focal = 1200;
+      let baseDotRadius = 2.4;
+      let mapScaleFactor = 1;
+
+      // Parallax state
+      let targetYaw = 0;
+      let targetPitchOffset = 0;
+      let currentYaw = 0;
+      let currentPitchOffset = 0;
+
+      // Interaction state
+      let isPointerActive = false;
+      let pointerPlaneX = 0;
+      let pointerPlaneY = 0;
+      let rippleStartTime = 0;
+      let rippleOriginX = 0;
+      let rippleOriginY = 0;
+      let exitStartTime = 0;
+      let exitOriginX = 0;
+      let exitOriginY = 0;
+
+      // Reduced motion detection
+      let prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
+        prefersReducedMotion = e.matches;
+      });
+
+      // Resize handling
+      function handleResize() {
+        const rect = canvas.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+
+        // Scaled up to appear prominently directly on the page background
+        mapScaleFactor = Math.min(width / 780, height / 580);
+        focal = 1200 * mapScaleFactor;
+        baseDotRadius = Math.max(2.4, 3.2 * mapScaleFactor);
+      }
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+
+      // Screen to map plane unprojection
+      function screenToMapPlane(sx, sy) {
+        const cx = width / 2;
+        const cy = height / 2 - 20 * mapScaleFactor;
+        const tilt = BASE_TILT + currentPitchOffset;
+        const cosT = Math.cos(tilt);
+        const sinT = Math.sin(tilt);
+
+        const dY = (sy - cy) / focal;
+        const denom = cosT + dY * sinT;
+        if (Math.abs(denom) < 0.001) return { x: 0, y: 0 };
+
+        const py = (dY * CAMERA_D) / denom;
+        const dist = CAMERA_D - py * sinT;
+        const s = focal / dist;
+        const px = (sx - cx) / s;
+
+        return { x: px, y: py };
+      }
+
+      // Pointer event listeners
+      canvas.addEventListener('pointerenter', function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const coords = screenToMapPlane(e.clientX - rect.left, e.clientY - rect.top);
+        isPointerActive = true;
+        pointerPlaneX = coords.x;
+        pointerPlaneY = coords.y;
+        rippleOriginX = coords.x;
+        rippleOriginY = coords.y;
+        rippleStartTime = performance.now();
+      });
+
+      canvas.addEventListener('pointermove', function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const sx = e.clientX - rect.left;
+        const sy = e.clientY - rect.top;
+        const coords = screenToMapPlane(sx, sy);
+        pointerPlaneX = coords.x;
+        pointerPlaneY = coords.y;
+
+        // Subtle Parallax (shifts tilt a few degrees)
+        if (!prefersReducedMotion) {
+          const normX = (sx - width / 2) / (width / 2);
+          const normY = (sy - height / 2) / (height / 2);
+          targetYaw = normX * 0.05; // +/- 2.8 degrees yaw
+          targetPitchOffset = normY * 0.04; // +/- 2.3 degrees pitch
+        }
+      });
+
+      canvas.addEventListener('pointerleave', function() {
+        if (!isPointerActive) return;
+        isPointerActive = false;
+        exitOriginX = pointerPlaneX;
+        exitOriginY = pointerPlaneY;
+        exitStartTime = performance.now();
+        targetYaw = 0;
+        targetPitchOffset = 0;
+      });
+
+      // Tap / touch interaction
+      canvas.addEventListener('pointerdown', function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const coords = screenToMapPlane(e.clientX - rect.left, e.clientY - rect.top);
+        pointerPlaneX = coords.x;
+        pointerPlaneY = coords.y;
+        rippleOriginX = coords.x;
+        rippleOriginY = coords.y;
+        rippleStartTime = performance.now();
+        isPointerActive = true;
+
+        // After touch tap, let the ripple play and fade back smoothly
+        setTimeout(() => {
+          if (isPointerActive) {
+            isPointerActive = false;
+            exitOriginX = pointerPlaneX;
+            exitOriginY = pointerPlaneY;
+            exitStartTime = performance.now();
+          }
+        }, 1600);
+      });
+
+      // Intersection Observer: pause when off-screen to preserve CPU/battery
+      let isVisible = true;
+      let animId = null;
+      let lastTime = performance.now();
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && !animId) {
+            lastTime = performance.now();
+            animId = requestAnimationFrame(render);
+          } else if (!isVisible && animId) {
+            cancelAnimationFrame(animId);
+            animId = null;
+          }
+        });
+      }, { threshold: 0.05 });
+
+      observer.observe(canvas);
+
+      // Play introductory welcome ripple when scrolled into view
+      let hasPlayedIntro = false;
+      const introObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasPlayedIntro) {
+            hasPlayedIntro = true;
+            rippleOriginX = 0;
+            rippleOriginY = 0;
+            rippleStartTime = performance.now();
+            isPointerActive = true;
+            setTimeout(() => {
+              isPointerActive = false;
+              exitOriginX = 0;
+              exitOriginY = 0;
+              exitStartTime = performance.now();
+            }, 1800);
+          }
+        });
+      }, { threshold: 0.3 });
+      introObserver.observe(canvas);
+
+      // Main Render Loop (capped at 60 FPS)
+      function render(now) {
+        animId = requestAnimationFrame(render);
+
+        const deltaMs = now - lastTime;
+        if (deltaMs < 1000 / 60) return; // 60 FPS cap
+        const dt = Math.min(deltaMs * 0.001, 0.1);
+        lastTime = now;
+
+        const timeSec = now * 0.001;
+
+        // Smooth Parallax Lerp
+        currentYaw += (targetYaw - currentYaw) * (1 - Math.exp(-dt * 6.0));
+        currentPitchOffset += (targetPitchOffset - currentPitchOffset) * (1 - Math.exp(-dt * 6.0));
+
+        // Prepare Canvas
+        ctx.save();
+        ctx.scale(dpr, dpr);
+        ctx.clearRect(0, 0, width, height);
+
+        const centerX = width / 2;
+        const centerY = height / 2 - 20 * mapScaleFactor;
+        const tilt = BASE_TILT + (prefersReducedMotion ? 0 : currentPitchOffset);
+        const cosTilt = Math.cos(tilt);
+        const sinTilt = Math.sin(tilt);
+        const cosYaw = Math.cos(prefersReducedMotion ? 0 : currentYaw);
+        const sinYaw = Math.sin(prefersReducedMotion ? 0 : currentYaw);
+
+        // Ripple front parameters
+        const RIPPLE_SPEED = 780; // pixels per second
+        const rippleElapsed = (now - rippleStartTime) * 0.001;
+        const rippleFrontDist = rippleStartTime > 0 ? rippleElapsed * RIPPLE_SPEED : 0;
+
+        const exitElapsed = (now - exitStartTime) * 0.001;
+        const exitFrontDist = exitStartTime > 0 ? exitElapsed * 840 : 0;
+
+        // Render each dot
+        for (let i = 0; i < dotCount; i++) {
+          const dot = dots[i];
+
+          // Compute ripple color propagation
+          const distFromRippleOrigin = Math.hypot(dot.x - rippleOriginX, dot.y - rippleOriginY);
+          const distFromCursor = isPointerActive ? Math.hypot(dot.x - pointerPlaneX, dot.y - pointerPlaneY) : 9999;
+          const distFromExitOrigin = Math.hypot(dot.x - exitOriginX, dot.y - exitOriginY);
+
+          let targetColor = 0;
+          if (isPointerActive) {
+            if (distFromRippleOrigin <= rippleFrontDist) {
+              targetColor = 1;
+            }
+          } else {
+            if (distFromExitOrigin <= exitFrontDist) {
+              targetColor = 0;
+            } else {
+              targetColor = dot.colorT;
+            }
+          }
+
+          // Smooth transition between gray and pink
+          const colorSpeed = targetColor > dot.colorT ? 7.0 : 4.5;
+          dot.colorT += (targetColor - dot.colorT) * (1 - Math.exp(-dt * colorSpeed));
+          if (dot.colorT < 0.001) dot.colorT = 0;
+          if (dot.colorT > 0.999) dot.colorT = 1;
+
+          // Organic Movement & Displacements
+          let dispX = 0;
+          let dispY = 0;
+          let dispZ = 0;
+
+          if (!prefersReducedMotion) {
+            // Subtle idle breathing shimmer (active in default state)
+            const idleZ = Math.sin(timeSec * 1.2 + dot.phase) * 1.0 * (1 - dot.colorT);
+            const idleX = Math.cos(timeSec * 0.9 + dot.phase) * 0.5 * (1 - dot.colorT);
+
+            // Flowing organic sine-wave displacement field when active
+            if (dot.colorT > 0.01) {
+              const wave1 = Math.sin(dot.x * 0.014 + timeSec * 1.7) * Math.cos(dot.y * 0.012 + timeSec * 1.3);
+              const wave2 = Math.cos(dot.x * 0.018 - timeSec * 1.4) * Math.sin(dot.y * 0.015 + timeSec * 1.5);
+              const pulse = Math.sin(distFromCursor * 0.028 - timeSec * 4.2);
+
+              const driftX = (wave1 * 3.2 + wave2 * 1.6) * dot.colorT;
+              const driftY = (wave2 * 3.2 + wave1 * 1.6) * dot.colorT;
+
+              // Cursor influence: lifts and swells with smooth gaussian falloff
+              const cursorInfluence = isPointerActive ? Math.exp(-(distFromCursor * distFromCursor) / (2 * 110 * 110)) : 0;
+              const liftZ = cursorInfluence * 20.0;
+              const waveZ = pulse * 3.8 * dot.colorT;
+
+              dispX = driftX + idleX;
+              dispY = driftY;
+              dispZ = liftZ + waveZ + idleZ;
+            } else {
+              dispX = idleX;
+              dispZ = idleZ;
+            }
+          }
+
+          // 3D Perspective Projection
+          const px = dot.x + dispX;
+          const py = dot.y + dispY;
+          const pz = -dispZ; // Lift towards camera
+
+          // Pitch rotation
+          const y1 = py * cosTilt - pz * sinTilt;
+          const z1 = py * sinTilt + pz * cosTilt;
+
+          // Yaw rotation (Parallax)
+          const x2 = px * cosYaw - z1 * sinYaw;
+          const z2 = px * sinYaw + z1 * cosYaw;
+
+          // Distance and projection scale
+          const dist = CAMERA_D - z2;
+          const scale = focal / dist;
+
+          const sx = centerX + x2 * scale;
+          const sy = centerY + y1 * scale;
+
+          // Cursor influence on dot radius (swell up to +35%)
+          const cursorInfluence = isPointerActive && !prefersReducedMotion ? Math.exp(-(distFromCursor * distFromCursor) / (2 * 110 * 110)) : 0;
+          const swell = 1 + cursorInfluence * 0.35;
+          const radius = Math.max(0.7, baseDotRadius * scale * swell);
+
+          // Color interpolation:
+          // Default: Dot Grid/Primary #D6D6D6 (214, 214, 214)
+          // Accent: Main Accent Pink #FF91AC (255, 145, 172)
+          const r = Math.round(214 + (255 - 214) * dot.colorT);
+          const g = Math.round(214 + (145 - 214) * dot.colorT);
+          const b = Math.round(214 + (172 - 214) * dot.colorT);
+
+          // Depth cue: farther dots are slightly fainter (0.75 to 1.0)
+          const depthAlpha = Math.min(1, Math.max(0.75, 0.75 + 0.25 * (scale - 0.65)));
+
+          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${depthAlpha})`;
+          ctx.beginPath();
+          ctx.arc(sx, sy, radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.restore();
+      }
+
+      // Start animation loop
+      lastTime = performance.now();
+      animId = requestAnimationFrame(render);
+    })();
+  </script>
+</body>
+</html>
